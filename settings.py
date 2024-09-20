@@ -1,0 +1,20 @@
+# Constants
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+CELL_SIZE = 20
+FPS = 24
+GAME_TIME = 30  # seconds per level
+PACMAN_SPEED = 30
+GHOST_SPEED = 24
+
+
+# Colors
+BLACK = (0, 0, 0)
+YELLOW = (255, 255, 0)
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+WHITE = (255, 255, 255)
+
+# Calculate grid dimensions
+GRID_WIDTH = SCREEN_WIDTH // CELL_SIZE
+GRID_HEIGHT = SCREEN_HEIGHT // CELL_SIZE
