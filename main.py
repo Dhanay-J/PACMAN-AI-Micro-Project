@@ -154,13 +154,13 @@ def main():
                     return
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_UP:
-                        pacman.direction = (0, -1)
+                        pacman.set_direction((0, -1)) 
                     elif event.key == pygame.K_DOWN:
-                        pacman.direction = (0, 1)
+                        pacman.set_direction((0, 1)) 
                     elif event.key == pygame.K_LEFT:
-                        pacman.direction = (-1, 0)
+                        pacman.set_direction((-1, 0)) 
                     elif event.key == pygame.K_RIGHT:
-                        pacman.direction = (1, 0)
+                        pacman.set_direction((1, 0)) 
 
             pacman.move(game_map)
             
@@ -172,8 +172,8 @@ def main():
             # Check for collisions with fruits
             for fruit in game_map.fruits[:]:
                 if (pacman.x, pacman.y) == (fruit.x, fruit.y):
+                    score += fruit.score
                     game_map.remove_fruit(fruit)
-                    score += 10
                     game_map.add_fruit(pacman, ghosts)
 
             # Check for collisions with ghosts
